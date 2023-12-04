@@ -50,7 +50,7 @@ body {
                 padding-left: 12px;
                 padding-right: 24px;
                 width: 92px;
-                height: 102px;
+                height: 95.5px;
                 &.active {
                         background-color: $body-bg;
                         border-top-left-radius: 12px;
@@ -157,13 +157,94 @@ body {
                     cursor: pointer;
                     transition: all .3s ease;
                     &:hover, &.active-item{
-                            background-image: url('./img/vector.svg');
-                            background-repeat: no-repeat;
-                            background-position: -2px 30px;
-                            color: $light-yellow;
+                        background-image: url('./img/vector.svg');
+                        background-repeat: no-repeat;
+                        background-position: -2px 30px;
+                        color: $light-yellow;
+                        position: relative;
+                        z-index: 1000;
                     }
                     &:active{
                         opacity: 0.9;
+                    }
+                }
+            }
+            .food-info {
+                margin-top: 24px;
+                color: $accent-color;
+                .food-info_header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0;
+                    margin-bottom: 60px;
+                    .food-info_dishes {
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 28px;
+                    }
+                    .custom-select {
+                        padding: 14px 14px 14px 34px;
+                        border: 1px solid $border-color;
+                        border-radius: 8px;
+                        background-color: $list-bg;
+                        color: $accent-color;
+                        appearance: none;
+                        background-image: url('./img/down-arrow.svg');
+                        background-repeat: no-repeat;
+                        background-position: 14px center;
+                        outline: none;
+                        & option {
+                            padding: 12px 0;
+                            border: 1px solid $border-color;
+                            color: $light-yellow;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .food__list {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 28px;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    .food__item {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+                        width: 30.38%;
+                        padding: 0 21px 21px 21px;
+                        margin-bottom: 24px;
+                        position: relative;
+                        background-color: $list-bg;
+                        border-radius: 16px;
+                        .food__img {
+                            width: 130px;
+                            position: absolute;
+                            border-radius: 50%;
+                            top: -34px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        .about__food {
+                            width: 144px;
+                            margin-top: 113px;
+                            .food__name {
+                                margin: 0;
+                                margin-bottom: 8px;
+                                font-weight: 500;
+                                line-height: 18.2px;
+                            }
+                            .food-price {
+                                margin: 0;
+                                margin-bottom: 4px;
+                            }
+                            .availabled-bowls {
+                                margin: 0;
+                                color: $price-color;
+                            }
+                        }
                     }
                 }
             }
@@ -229,11 +310,6 @@ body {
                             margin-right: 43px;
                             margin-left: 225px;
                         }
-                    }
-                    hr{
-                        height: 1px;
-                        background-color: $border-color;
-                        border: none;
                     }
                 }
                 .product-info__list {
@@ -420,12 +496,6 @@ body {
                     }
                 }
             }
-            
-            
-            
-            
-            
-            
         }
     }
 }
